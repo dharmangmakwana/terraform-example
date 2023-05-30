@@ -1,4 +1,4 @@
-terraform {
+/*terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"
@@ -8,5 +8,6 @@ terraform {
 }
 
 provider "aws" {
-  # Configuration options
-}
+  profile    = "${var.profile}"
+  region     = "${var.region}"
+}*/
