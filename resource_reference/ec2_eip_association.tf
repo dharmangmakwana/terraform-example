@@ -16,8 +16,8 @@ resource "aws_eip" "myeip" {
 }
 
 resource "aws_instance" "web" {
-  ami = "ami-0715c1897453cabd1"
-  instance_type = "t2.micro"
+  ami = var.ami
+  instance_type = var.instance_type
   tags = {
     Name = "Web Server"
     CreatedBy = "Dharmang Makwana"
@@ -39,7 +39,7 @@ resource "aws_security_group" "WebSG" {
     from_port        = 22
     to_port          = 22
     protocol         = "tcp"
-    cidr_blocks      = ["103.85.11.119/32"]
+    cidr_blocks      = [var.home_ip]
   }
 }
 
