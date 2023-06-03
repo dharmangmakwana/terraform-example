@@ -55,3 +55,7 @@ output "echoing" {
 output "echoing-slice" {
   value  = "${var.az[0]}"
 }
+
+output "echoing-map" {
+  value = var.json["sonname"]
+}

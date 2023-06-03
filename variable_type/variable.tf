@@ -27,3 +27,14 @@ variable "instance_type" {
 variable "az" {
   type = list(string)
 }
+
+variable "json" {
+  type = map(string)
+  default = {
+    fathername = "dharmang"
+    daughtername = "rishika"
+    sonname = "riaan"
+    wife = "saloni"
+  }
+
+}
