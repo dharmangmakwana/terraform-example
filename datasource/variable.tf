@@ -1,11 +1,11 @@
 variable "region" {
-    default = "us-east-1"
-    type = string
+  default = "us-east-1"
+  type    = string
 }
 
 variable "profile" {
-    default = "default"
-    type = string
+  default = "default"
+  type    = string
 }
 
 /*variable "ami" {
@@ -14,20 +14,20 @@ variable "profile" {
 }*/
 
 variable "web-count" {
-  type = number
+  type    = number
   default = 2
 }
 variable "instance_type" {
   default = "t2.micro"
-  type = string
+  type    = string
 }
 
 variable "resource_name" {
-  type = list(string)
-  default = [ "WebServer", "TransactionServer", "AdapterServer" ]
+  type    = list(string)
+  default = ["WebServer", "TransactionServer", "AdapterServer"]
 }
 
 variable "deployment_type" {
-  type = string
+  type    = string
   default = "dev"
 }
