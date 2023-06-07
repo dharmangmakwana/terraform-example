@@ -1,4 +1,5 @@
 terraform {
+  required_version = "~>1.4.6"
   required_providers {
     aws = {
       source = "hashicorp/aws"
@@ -27,4 +28,14 @@ resource "aws_s3_bucket" "mys3bucket" {
 
 output "mys3bucket" {
   value = aws_s3_bucket.mys3bucket.bucket_domain_name
+}
+
+resource "aws_iam_user" "iamuser" {
+  name = "demouser.${count.index+1}"
+  path = "/system/"
+  count = 3
+}
+
+output "user_arn" {
+  value = aws_iam_user.iamuser[*].arn
 }
