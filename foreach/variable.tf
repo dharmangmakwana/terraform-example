@@ -10,7 +10,7 @@ variable "profile" {
 
 variable "ami" {
   default = "ami-0715c1897453cabd1"
-  type = string
+  type    = string
 }
 
 variable "web-count" {
@@ -39,6 +39,6 @@ variable "ingress_ports" {
 }
 
 variable "set" {
-  type = set(string)
-  default = [ "dharmang", "Dhrumit", "Krushnakant", "dharmang" ]
+  type    = set(string)
+  default = ["dharmang", "Dhrumit", "Krushnakant", "dharmang"]
 }

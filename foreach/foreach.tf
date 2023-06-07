@@ -14,7 +14,7 @@ provider "aws" {
 
 # Method 1
 resource "aws_iam_user" "mobifin_user" {
-  path = "/system/"
+  path     = "/system/"
   for_each = toset(var.set)
   # toset function is eliminating the duplicate values
   name = each.key
@@ -31,5 +31,5 @@ resource "aws_instance" "web" {
   tags = {
     Name = each.key
   }
- 
+
 }
