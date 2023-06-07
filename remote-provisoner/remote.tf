@@ -29,6 +29,9 @@ resource "aws_instance" "web" {
       "sudo yum -y install httpd",
       "sudo systemctl start httpd"
     ]
+  }
 
+  provisioner "local-exec" {
+    command = "echo 'Hello World' >> output.txt" 
   }
 }
