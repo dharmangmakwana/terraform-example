@@ -1,4 +1,4 @@
-terraform {
+/* terraform {
   required_providers {
     github = {
       source  = "integrations/github"
@@ -17,4 +17,4 @@ resource "github_repository" "terraform-example" {
   description = "My awesome codebase"
 
   visibility = "public"
-}
+} */
